@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-function time_now() {
-  return new Date().toLocaleTimeString();
-}
-
 function App() {
-  const [time, setTime] = useState(time_now());
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
   const [autoUpdate, setAutoUpdate] = useState(false);
 
   const updateTime = () => {
-    setTime(time_now());
+    setTime(new Date().toLocaleTimeString());
   };
 
   useEffect(() => {
